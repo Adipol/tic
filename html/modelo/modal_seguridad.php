@@ -77,6 +77,174 @@
                         </select>
                         <p><strong>Alimentamiento</strong>.</p>
                     </div>
+                    
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_Capacidad" id="int_Capacidad">
+                            <option>1 Tb</option>
+                            <option>32 Gb</option>
+                            <option>64 Gb</option>
+                            <option>Otro</option>                                       
+                        </select>
+                        <p><strong>Capacidad</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">                                      
+                        <input id="int_num_serie_hdd" name="int_num_serie_hdd" type="text" class="form-control input-sm" placeholder="Llenar" >
+                        <p><strong>Numero de serie HDD</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_tornillos_rac_hdd" id="int_tornillos_rac_hdd">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>Completo</option>
+                            <option>No Tiene</option>                                    
+                        </select>
+                        <p><strong>Tornillos Rack HDD</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_adaptador_rca" id="int_adaptador_rca">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Adaptador RCA</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_lambda1" id="int_lambda1">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Landa 1</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_lambda2" id="int_lambda2">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Landa 2</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_lambda3" id="int_lambda3">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Landa 3</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_lambda4" id="int_out1">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Landa 4</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out1" id="int_out1">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Out 1</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out2" id="int_out2">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Out 2</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out3" id="int_out3">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Out 3</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>Reparado</option>                                  
+                        </select>
+                        <p><strong>Out 4</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Mezaclador de Video</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Out 1 del kl</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Out 2 del kl</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Out 3 del kl</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                            <option>Funciona</option>
+                            <option>No funciona</option>
+                            <option>No tiene</option>                                  
+                        </select>
+                        <p><strong>Out 4 del kl</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_cam_com_front" id="int_cam_com_front">
+                            <option>Sana</option>
+                            <option>No tiene</option>                                
+                        </select>
+                        <p><strong>Camara frontal</strong>.</p>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_cam_com_cond" id="int_cam_com_cond">
+                            <option>Sana</option>
+                            <option>No tiene</option>                                
+                        </select>
+                        <p><strong>Camara del Conductor</strong>.</p>
+                    </div>
 
                     <div class="col-sm-12 form-group">
                           <label class="control-label"> Ultima Observacion</label>

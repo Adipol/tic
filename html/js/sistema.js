@@ -502,23 +502,26 @@ function detalle_seguridad(id)
            $("#int_dvr_existencia").val(seg.dvr_existencia);
            $("#int_funcion_grabacion").val(seg.funcion_grabacion);   
            $("#int_Almacenamiento").val(seg.Almacenamiento);   
-                
-		 /*$("#rout_num_serie").val(inter.rout_num_serie); 
-		   $("#rout_num_imei").val(inter.rout_num_imei); 
-		   $("#rout_estado").val(inter.rout_estado); 
-		   $("#rout_ubicacion").val(inter.rout_ubicacion); 
-		   $("#rout_cargador").val(inter.rout_cargador); 
-		   $("#int_sim").val(inter.sim); 
-		   $("#sim_ubicacion").val(inter.sim_ubicacion); 
-		   $("#sim_numero").val(inter.sim_numero); 
-		   $("#sim_serie").val(inter.sim_serie);
-		   $("#abrazaderas").val(inter.abrazaderas); 
-		   $("#cloud").val(inter.cloud); 
-		   $("#cloud_estado").val(inter.cloud_estado); 
-		   $("#cloud_numero").val(inter.cloud_numero); 
-		   $("#cloud_serie").val(inter.cloud_serie); 
-           $("#cloud_cargador").val(inter.cloud_cargador); */
-              
+           $("#int_Capacidad").val(seg.Capacidad);
+           $("#int_num_serie_hdd").val(seg.num_serie_hdd);   
+           $("#int_tornillos_rac_hdd").val(seg.tornillos_rac_hdd);
+           $("#int_adaptador_rca").val(seg.adaptador_rca);        
+           $("#int_lambda1").val(seg.lambda1);           
+           $("#int_lambda2").val(seg.lambda2);   
+           $("#int_lambda3").val(seg.lambda3);   
+           $("#int_lambda4").val(seg.lambda4);              
+           $("#int_out1").val(seg.out1); 
+           $("#int_out2").val(seg.out2);  
+           $("#int_out3").val(seg.out3);  
+           $("#int_out4").val(seg.out4);  
+           $("#int_kl_mesclaor_video").val(seg.kl_mesclaor_video);            
+           $("#int_kl_out1").val(seg.kl_out1);
+           $("#int_kl_out2").val(seg.kl_out2);
+           $("#int_kl_out3").val(seg.kl_out3);
+           $("#int_kl_out4").val(seg.kl_out4); 
+           $("#int_cam_com_front").val(seg.cam_com_front);
+           $("#int_cam_com_cond").val(seg.cam_com_cond);                  
+
 		   $("#obs").val(seg.obs);    
 	   }
    );

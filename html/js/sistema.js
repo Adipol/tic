@@ -324,6 +324,7 @@ function detalle_electrico(id)
     // Open modal popup
     $("#update_electrico_modal").modal("show");
 }
+
 function editar_electrico() 
 {     //alert("entro a la funcion");
 // Devuelve Valores   
@@ -338,7 +339,7 @@ function editar_electrico()
            var cableado_energia = $("#cableado_energia").val(); 
            var estado_inversor = $("#estado_inversor").val(); 
            var e_observacion = $("#e_observacion").val(); 
-          
+
     // Adiciona Ticket
     $.post("modelo/adiciona_electrico.php", 
     {
@@ -403,7 +404,7 @@ function detalle_geoloc(id)
             $("#porta_handset").val(ge.porta_handset); 
             $("#visualizacion_sistema_gps").val(ge.visualizacion_sistema_gps);            
             $("#geo_observaciones").val(ge.obs);     
-           
+
         }
     );
     // Open modal popup
@@ -482,21 +483,27 @@ function detalle_seguridad(id)
    // Add User ID to the hidden field for furture usage
    $("#update_hidden_seguridad_id").val(id);
    $.post("modelo/detalle_seguridad.php", 
-	   {
+     {
 		   id: id
-	   },
+     },
+         
 	   function (data, status) 
 	   {
 		   // PARSE json data
 		   var seg = JSON.parse(data);
 		   // Assing existing valhe modal popup fields  Textos completos
-		   $("#int_cod_user").val(seg.cod_user); 
-		   $("#int_nombre_bus").val(seg.nombre_bus); 
-		   $("#int_bus_idbus").val(seg.bus_idbus); 
+
+           $("#int_cod_user").val(seg.cod_user);
+		   $("#int_nombre_bus").val(seg.nombre_bus);
+		   $("#int_bus_idbus").val(seg.bus_idbus);
 		   $("#int_instalacion_idinstalacion").val(seg.instalacion_idinstalacion);
-		  /* $("#router_existencia").val(inter.router_existencia);
-		   $("#estado").val(inter.estado); 
-		   $("#rout_num_serie").val(inter.rout_num_serie); 
+		   $("#int_dvr_gabinete").val(seg.dvr_gabinete);
+           $("#int_dvr").val(seg.dvr);
+           $("#int_dvr_existencia").val(seg.dvr_existencia);
+           $("#int_funcion_grabacion").val(seg.funcion_grabacion);   
+           $("#int_Almacenamiento").val(seg.Almacenamiento);   
+                
+		 /*$("#rout_num_serie").val(inter.rout_num_serie); 
 		   $("#rout_num_imei").val(inter.rout_num_imei); 
 		   $("#rout_estado").val(inter.rout_estado); 
 		   $("#rout_ubicacion").val(inter.rout_ubicacion); 
@@ -510,7 +517,8 @@ function detalle_seguridad(id)
 		   $("#cloud_estado").val(inter.cloud_estado); 
 		   $("#cloud_numero").val(inter.cloud_numero); 
 		   $("#cloud_serie").val(inter.cloud_serie); 
-		   $("#cloud_cargador").val(inter.cloud_cargador); */
+           $("#cloud_cargador").val(inter.cloud_cargador); */
+              
 		   $("#obs").val(seg.obs);    
 	   }
    );

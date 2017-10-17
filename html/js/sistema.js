@@ -510,25 +510,95 @@ function detalle_seguridad(id)
            $("#int_lambda2").val(seg.lambda2);   
            $("#int_lambda3").val(seg.lambda3);   
            $("#int_lambda4").val(seg.lambda4);              
-           $("#int_out1").val(seg.out1); 
-           $("#int_out2").val(seg.out2);  
-           $("#int_out3").val(seg.out3);  
-           $("#int_out4").val(seg.out4);  
-           $("#int_kl_mesclaor_video").val(seg.kl_mesclaor_video);            
+           $("#int_out1").val(seg.out1);
+           $("#int_out2").val(seg.out2);
+           $("#int_out3").val(seg.out3);
+           $("#int_out4").val(seg.out4);
+           $("#int_kl_mesclaor_video").val(seg.kl_mesclaor_video);         
            $("#int_kl_out1").val(seg.kl_out1);
            $("#int_kl_out2").val(seg.kl_out2);
            $("#int_kl_out3").val(seg.kl_out3);
-           $("#int_kl_out4").val(seg.kl_out4); 
+           $("#int_kl_out4").val(seg.kl_out4);
            $("#int_cam_com_front").val(seg.cam_com_front);
-           $("#int_cam_com_cond").val(seg.cam_com_cond);                  
-
-		   $("#obs").val(seg.obs);    
+           $("#int_cam_com_cond").val(seg.cam_com_cond);
+           $("#int_cam_val").val(seg.cam_val);              
+           $("#int_cam_puerta_sal").val(seg.cam_puerta_sal);
+           $("#int_cam_retro").val(seg.cam_retro);
+           $("#obs").val(seg.obs);     
 	   }
    );
    // Open modal popup
    $("#update_seguridad_modal").modal("show");
 }
 
+function editar_seguridad() 
+{        
+if(confirm("Realmente desea cambiar los datos?"))
+    {
+           var int_bus_idbus = $("#int_bus_idbus").val(); 
+           var int_instalacion_idinstalacion = $("#int_instalacion_idinstalacion").val();
+           var int_dvr_gabinete = $("#int_dvr_gabinete").val();
+           var int_dvr = $("#int_dvr").val();
+           var int_dvr_existencia = $("#int_dvr_existencia").val();
+           var int_funcion_grabacion = $("#int_funcion_grabacion").val();
+           var int_Almacenamiento = $("#int_Almacenamiento").val();
+           var int_Capacidad = $("#int_Capacidad").val();
+           var int_num_serie_hdd = $("#int_num_serie_hdd").val(); 
+           var int_tornillos_rac_hdd = $("#int_tornillos_rac_hdd").val();
+           var int_adaptador_rca = $("#int_adaptador_rca").val(); 
+           var int_lambda1 = $("#int_lambda1").val(); 
+           var int_lambda2 = $("#int_lambda2").val();
+           var int_lambda3 = $("#int_lambda3").val(); 
+           var int_lambda4 = $("#int_lambda4").val(); 
+           var int_out1 = $("#int_out1").val();
+           var int_out2 = $("#int_out2").val(); 
+           var int_out3 = $("#int_out3").val(); 
+           var int_out4 = $("#int_out4").val();  
+           var int_cam_com_front = $("#int_cam_com_front").val(); 
+           var int_cam_com_cond = $("#int_cam_com_cond").val(); 
+           var int_cam_puerta_sal = $("#int_cam_puerta_sal").val(); 
+           var int_cam_retro = $("#int_cam_retro").val();       
+           var int_observacion = $("#int_observacion").val();  
+    // Adiciona Ticket
+    $.post("modelo/adiciona_seguridad.php", 
+    {
+           int_bus_idbus:int_bus_idbus,
+           int_instalacion_idinstalacion:int_instalacion_idinstalacion,
+           estado:estado,
+           router_existencia:router_existencia,
+           rout_num_serie:rout_num_serie,
+           rout_num_imei:rout_num_imei,
+           rout_estado:rout_estado,
+           rout_ubicacion:rout_ubicacion,
+           rout_cargador:rout_cargador,
+           int_sim:int_sim,
+           sim_ubicacion:sim_ubicacion,
+           sim_numero:sim_numero,
+           sim_serie:sim_serie,
+           abrazaderas:abrazaderas,
+           cloud:cloud,
+           cloud_estado:cloud_estado,
+           cloud_numero:cloud_numero,
+           cloud_serie:cloud_serie,
+           cloud_cargador:cloud_cargador,
+           int_observacion:int_observacion
+	  },
+	  
+
+   function (data, status) 
+    { 
+        // close the popup
+        $("#update_seguridad_modal").modal("hide");
+        refresh();
+
+	});
+	
+    }
+    return false;
+
+}
+
+//fin seguridad
 
 //Internet
 
@@ -572,20 +642,21 @@ function detalle_internet(id)
     // Open modal popup
     $("#update_internet_modal").modal("show");
 }
+
 function editar_internet() 
-{     
+{        
 if(confirm("Realmente desea cambiar los datos?"))
     {
-        var int_bus_idbus = $("#int_bus_idbus").val(); 
+           var int_bus_idbus = $("#int_bus_idbus").val(); 
            var int_instalacion_idinstalacion = $("#int_instalacion_idinstalacion").val();
-           var estado = $("#estado").val(); 
-           var router_existencia = $("#router_existencia").val(); 
-           var rout_num_serie = $("#rout_num_serie").val(); 
-           var rout_num_imei = $("#rout_num_imei").val(); 
-           var rout_estado = $("#rout_estado").val(); 
-           var rout_ubicacion = $("#rout_ubicacion").val(); 
+           var estado = $("#estado").val();
+           var router_existencia = $("#router_existencia").val();
+           var rout_num_serie = $("#rout_num_serie").val();
+           var rout_num_imei = $("#rout_num_imei").val();
+           var rout_estado = $("#rout_estado").val();
+           var rout_ubicacion = $("#rout_ubicacion").val();
            var rout_cargador = $("#rout_cargador").val(); 
-           var int_sim = $("#int_sim").val(); 
+           var int_sim = $("#int_sim").val();
            var sim_ubicacion = $("#sim_ubicacion").val(); 
            var sim_numero = $("#sim_numero").val(); 
            var sim_serie = $("#sim_serie").val();

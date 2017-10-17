@@ -246,6 +246,30 @@
                         <p><strong>Camara del Conductor</strong>.</p>
                     </div>
 
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_cam_val" id="int_cam_val">
+                            <option>Sana</option>
+                            <option>No tiene</option>                                
+                        </select>
+                        <p><strong>Camara del Validador</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_cam_puerta_sal" id="int_cam_puerta_sal">
+                            <option>Sana</option>
+                            <option>No tiene</option>                                
+                        </select>
+                        <p><strong>Camara de la puerta de Salida</strong>.</p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="int_cam_retro" id="int_cam_retro">
+                            <option>Sana</option>
+                            <option>No tiene</option>                                
+                        </select>
+                        <p><strong>Camara de retro</strong>.</p>
+                    </div>
+
                     <div class="col-sm-12 form-group">
                           <label class="control-label"> Ultima Observacion</label>
                            <div class="form-group">

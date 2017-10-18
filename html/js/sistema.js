@@ -524,7 +524,7 @@ function detalle_seguridad(id)
            $("#int_cam_val").val(seg.cam_val);              
            $("#int_cam_puerta_sal").val(seg.cam_puerta_sal);
            $("#int_cam_retro").val(seg.cam_retro);
-           $("#obs").val(seg.obs);     
+           $("#int_obs").val(seg.obs);     
 	   }
    );
    // Open modal popup
@@ -553,44 +553,51 @@ if(confirm("Realmente desea cambiar los datos?"))
            var int_out1 = $("#int_out1").val();
            var int_out2 = $("#int_out2").val(); 
            var int_out3 = $("#int_out3").val(); 
-           var int_out4 = $("#int_out4").val();  
+		   var int_out4 = $("#int_out4").val(); 
+		   var int_kl_mesclaor_video = $("#int_kl_mesclaor_video").val(); 
+           var int_kl_out1 = $("#int_kl_out1").val(); 
+		   var int_kl_out2 = $("#int_kl_out2").val(); 
+		   var int_kl_out3 = $("#int_kl_out3").val(); 
+		   var int_kl_out4 = $("#int_kl_out4").val(); 
            var int_cam_com_front = $("#int_cam_com_front").val(); 
-           var int_cam_com_cond = $("#int_cam_com_cond").val(); 
+		   var int_cam_com_cond = $("#int_cam_com_cond").val(); 
+		   var int_cam_val = $("#int_cam_val").val();
            var int_cam_puerta_sal = $("#int_cam_puerta_sal").val(); 
            var int_cam_retro = $("#int_cam_retro").val();       
-           var int_observacion = $("#int_observacion").val();  
+           var int_observacion = $("#nueva_observacion").val();  
     // Adiciona Ticket
     $.post("modelo/adiciona_seguridad.php", 
     {
-           int_bus_idbus:int_bus_idbus,
-           int_instalacion_idinstalacion:int_instalacion_idinstalacion,
-           dvr_gabinete:dvr_gabinete,
-           dvr:dvr,
-           dvr_existencia:dvr_existencia,
-           funcion_grabacion:funcion_grabacion,
-           Almacenamiento:Almacenamiento,
-           Capacidad:Capacidad,
-           num_serie_hdd:num_serie_hdd,
-           tornillos_rac_hdd:tornillos_rac_hdd,
-           adaptador_rca:adaptador_rca,
-           lambda1:lambda1,
-           lambda2:lambda2,
-           lambda3:lambda3,
-           lambda4:lambda4,
-           out1:out1,
-           out2:out2,
-           out3:out3,
-		   out4:out4,
-		   kl_mesclaor_video:kl_mesclaor_video,
-		   kl_out1:kl_out1,
-		   kl_out2:kl_out2,
-		   kl_out3:kl_out3,
-		   kl_out4:kl_out4,
-		   cam_com_front:cam_com_front,
-		   cam_com_cond:cam_com_cond,
-		   cam_val:cam_val,
-		   cam_puerta_sal:cam_puerta_sal,
-		   cam_retro:cam_retro,
+		   bus_idbus:int_bus_idbus,
+		   instalacion_idinstalacion:int_instalacion_idinstalacion,
+		   
+           dvr_gabinete:int_dvr_gabinete,
+           dvr:int_dvr,
+           dvr_existencia:int_dvr_existencia,
+           funcion_grabacion:int_funcion_grabacion,
+           Almacenamiento:int_Almacenamiento,
+           Capacidad:int_Capacidad,
+           num_serie_hdd:int_num_serie_hdd,
+           tornillos_rac_hdd:int_tornillos_rac_hdd,
+           adaptador_rca:int_adaptador_rca,
+           lambda1:int_lambda1,
+           lambda2:int_lambda2,
+           lambda3:int_lambda3,
+           lambda4:int_lambda4,
+           out1:int_out1,
+           out2:int_out2,
+           out3:int_out3,
+		   out4:int_out4,
+		   kl_mesclaor_video:int_kl_mesclaor_video,
+		   kl_out1:int_kl_out1,
+		   kl_out2:int_kl_out2,
+		   kl_out3:int_kl_out3,
+		   kl_out4:int_kl_out4,
+		   cam_com_front:int_cam_com_front,
+		   cam_com_cond:int_cam_com_cond,
+		   cam_val:int_cam_val,
+		   cam_puerta_sal:int_cam_puerta_sal,
+		   cam_retro:int_cam_retro,
            int_observacion:int_observacion
 	  },
 	  
@@ -599,7 +606,7 @@ if(confirm("Realmente desea cambiar los datos?"))
     { 
         // close the popup
         $("#update_seguridad_modal").modal("hide");
-        refresh();
+         refresh();
 
 	});
 	

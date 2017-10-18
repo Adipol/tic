@@ -31,8 +31,8 @@ date_default_timezone_set('America/La_Paz');
   
   $restriccion = "SELECT idgeolocalizacion FROM geolocalizacion  WHERE fecha IN (SELECT MAX(g.fecha) 
 															FROM geolocalizacion g
-															WHERE g.bus_idbus = $bus_idbus
-															GROUP BY g.bus_idbus) AND bus_idbus = $bus_idbus
+															WHERE g.bus_idbus = '$bus_idbus'
+															GROUP BY g.bus_idbus) AND bus_idbus = '$bus_idbus'
 	AND  instalacion_idinstalacion='$instalacion_idinstalacion' AND  estado_operativo_gps='$estado_operativo_gps' AND  ubicacion='$ubicacion' AND  imei='$imei' AND  numero_serie='$numero_serie' AND  codigo_gamlp='$codigo_gamlp' AND  cod_gamlp='$cod_gamlp'  AND  sim_card='$sim_card'  AND  numero_sim_card='$numero_sim_card'  AND  numero_serie_sim_card='$numero_serie_sim_card'  AND  gps='$gps'  AND  gsm='$gsm'  AND  handset='$handset'  AND  estado_handset='$estado_handset'  AND  conector_gps='$conector_gps'  AND  display_handset='$display_handset'  AND  botones_handset='$botones_handset'  AND  carcasa_handset='$carcasa_handset' AND  porta_handset='$porta_handset' AND  visualizacion_sistema_gps='$visualizacion_sistema_gps'";
 
    $res=mysql_query($restriccion);

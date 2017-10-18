@@ -1,5 +1,7 @@
 <?php  
 include("conec.php");
+session_start();
+
 	$usuario = $_POST['usuario'];
 	$password =$_POST['pass'];
 	//echo $usuario;
@@ -11,7 +13,8 @@ include("conec.php");
     
 	if($id[0] > 0 )
 	{  
-		    session_start();
+
+			$_SESSION['id_usuario'] = $id[idusuario];
 			$_SESSION['id'] = $id[0];
 			$_SESSION['cod'] = $id[1];
 			$_SESSION['roles'] = $id[2];

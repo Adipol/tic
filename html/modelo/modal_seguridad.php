@@ -32,7 +32,7 @@
                 </div>
 
 					<div class="col-sm-3">
-                        <select class="form-control input-sm" name="dvr_gabinete" id="dvr_gabinete">
+                        <select class="form-control input-sm" name="int_dvr_gabinete" id="int_dvr_gabinete">
                              <option>Buen Estado</option>
                              <option>Mal Estao</option> 
                              <option>No tiene</option> 
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_lambda4" id="int_out1">
+                        <select class="form-control input-sm" name="int_lambda4" id="int_lambda4">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>Reparado</option>                                  
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                        <select class="form-control input-sm" name="int_kl_mesclaor_video" id="int_kl_mesclaor_video">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>No tiene</option>                                  
@@ -195,7 +195,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                        <select class="form-control input-sm" name="int_kl_out1" id="int_kl_out1">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>No tiene</option>                                  
@@ -204,7 +204,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                        <select class="form-control input-sm" name="int_kl_out2" id="int_kl_out2">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>No tiene</option>                                  
@@ -213,7 +213,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                        <select class="form-control input-sm" name="int_kl_out3" id="int_kl_out3">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>No tiene</option>                                  
@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <select class="form-control input-sm" name="int_out4" id="int_out4">
+                        <select class="form-control input-sm" name="int_kl_out4" id="int_kl_out4">
                             <option>Funciona</option>
                             <option>No funciona</option>
                             <option>No tiene</option>                                  
@@ -273,7 +273,7 @@
                     <div class="col-sm-12 form-group">
                           <label class="control-label"> Ultima Observacion</label>
                            <div class="form-group">
-                                <textarea readonly id="observaciones" rows="3" name="observaciones" type="text" class="form-control" placeholder="observaciones" onkeyup="validacion('objetivo');" ></textarea>
+                                <textarea readonly id="int_obs" rows="3" name="int_obs" type="text" class="form-control" ></textarea>
                                 <span class="help-block"></span>
                           </div>
                    </div>
@@ -290,8 +290,8 @@
                 <div class="modal-footer">
                   <div class="col-sm-12 form-group">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-primary" onclick="editar_cobro()"><span class="glyphicon glyphicon-lock"></span>Guardar</button>  
-                      <input type="hidden" id="update_hidden_seguridad_id"> 
+                      <button type="button" class="btn btn-primary" onclick="editar_seguridad()"><span class="glyphicon glyphicon-lock"></span>Guardar</button>  
+                      
                    </div>
                 </div>     
               </div>

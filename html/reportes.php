@@ -2,17 +2,16 @@
 include("header.php");
 include("modelo/conec.php");
  ?>
+
 <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Reportes</h4> </div>
-                  
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
- 
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="white-box">                         
@@ -25,9 +24,7 @@ include("modelo/conec.php");
                                     <thead>
                                         <tr>
                                             <th>ESTADO DEL VALIDADORES</th>
-                                            <th>CANTIDAD</th>
-                                            
-                                        
+                                            <th>CANTIDAD</th>          
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,7 +44,6 @@ include("modelo/conec.php");
                                              <td class="txt-oflo"><?php echo $querv['estado_operativo'];?>   </td>
 											 <td class="txt-oflo"><a href="reporte_cobro.php?dato=<?php echo $querv['estado_operativo'];?>&dato3=estado_operativo"><span><strong><?php echo $querv['cantidad'];?></strong></span></a></td>                       
                                         	</tr>
-
                                              <?php }?>  
                                         <tr>                                                                     
                                              <td class="txt-oflo"> </td>
@@ -73,7 +69,11 @@ include("modelo/conec.php");
                                     </thead>
                                     <tbody>
                                    <?php
-                              $query_elec="select acceso.estado_molinete, count(*) as cantidad from acceso group by acceso.estado_molinete";
+                              $query_elec=" SELECT acceso.estado_molinete, count(*) as cantidad from acceso 
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM acceso 
+                                            GROUP BY bus_idbus)
+                                            group by acceso.estado_molinete";
                               $query_ele=mysql_query($query_elec);                          
                               while($quer = mysql_fetch_assoc($query_ele))
                               {
@@ -107,7 +107,11 @@ include("modelo/conec.php");
                                     </thead>
                                     <tbody>
                                    <?php
-                              $query_elec="select geolocalizacion.estado_operativo_gps, count(*) as cantidad from geolocalizacion group by geolocalizacion.estado_operativo_gps";
+                              $query_elec=" SELECT geolocalizacion.estado_operativo_gps, count(*) as cantidad from geolocalizacion 
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM geolocalizacion 
+                                            GROUP BY bus_idbus)
+                                            group by geolocalizacion.estado_operativo_gps";
                               $query_ele=mysql_query($query_elec);        
                                                    
                               while($quer = mysql_fetch_assoc($query_ele))
@@ -138,13 +142,17 @@ include("modelo/conec.php");
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>FUNCIÒN DE GRABACIÒN</th>
-                                            <th>CANTIDAD</th>
+                                             <th>FUNCIÒN DE GRABACIÒN</th>
+                                             <th>CANTIDAD</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                    <?php
-                              $query_val="select seguridad.funcion_grabacion, count(*) as cantidad from seguridad group by seguridad.funcion_grabacion";
+                              $query_val="  SELECT seguridad.funcion_grabacion, count(*) as cantidad from seguridad 
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM seguridad 
+                                            GROUP BY bus_idbus)
+                                            group by seguridad.funcion_grabacion";
                               $query_va=mysql_query($query_val);                          
                               while($querv = mysql_fetch_assoc($query_va))
                               {
@@ -178,7 +186,11 @@ include("modelo/conec.php");
                                     </thead>
                                     <tbody>
                                    <?php
-                              $query_elec="select audiovisual.estado_kl, count(*) as cantidad from audiovisual group by audiovisual.estado_kl";
+                              $query_elec=" SELECT audiovisual.estado_kl, count(*) as cantidad from audiovisual
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM audiovisual 
+                                            GROUP BY bus_idbus)
+                                            group by audiovisual.estado_kl";
                               $query_ele=mysql_query($query_elec);                          
                               while($quer = mysql_fetch_assoc($query_ele))
                               {
@@ -212,7 +224,11 @@ include("modelo/conec.php");
                                     </thead>
                                     <tbody>
                                 <?php
-                              $query_elec="select internet.estado, count(*) as cantidad from internet group by internet.estado";
+                              $query_elec=" SELECT internet.estado, count(*) as cantidad from internet 
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM internet 
+                                            GROUP BY bus_idbus)
+                                            group by internet.estado";
                               $query_ele=mysql_query($query_elec);                          
                               while($quer = mysql_fetch_assoc($query_ele))
                               {
@@ -246,7 +262,11 @@ include("modelo/conec.php");
                                     </thead>
                                     <tbody>
                                 <?php
-                              $query_elec="select electrico.estado_inversor, count(*) as cantidad from electrico group by electrico.estado_inversor";
+                              $query_elec=" SELECT electrico.estado_inversor, count(*) as cantidad from electrico
+                                            WHERE fecha IN (SELECT MAX(fecha)                                                 
+                                            FROM electrico 
+                                            GROUP BY bus_idbus)
+                                            group by electrico.estado_inversor";
                               $query_ele=mysql_query($query_elec);                          
                               while($quer = mysql_fetch_assoc($query_ele))
                               {

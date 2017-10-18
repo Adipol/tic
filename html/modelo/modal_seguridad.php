@@ -15,11 +15,28 @@
                       <div class="form-horizontal" role="form">
                         <input readonly id="int_nombre_bus" name="int_nombre_bus" type="text" class="form-control input-sm" placeholder="no tiene">  
                       </div>  
-
                    </div>
 
-
-
+				   <label class="col-sm-12 "><strong class="text-danger">DVR</strong></label>
+                    <div class="col-sm-3">
+                     <?php $instalacion="SELECT * 
+                        FROM instalacion";
+                        $inst = mysql_query($instalacion); ?>
+                        <select class="form-control input-sm" name="int_instalacion_idinstalacion" id="int_instalacion_idinstalacion">
+                           <?php while ($in=mysql_fetch_row($inst)) 
+                             {?>
+                             <option value='<?php echo $in[0];?>'> <?php echo $in[1]; ?> </option>
+                             <?php } ?>
+                        </select>
+                        <p><strong>Patio</strong>.</p>
+                    </div>
+					<div class="col-sm-3">
+                        <select class="form-control input-sm" name="router_existencia" id="router_existencia">
+                             <option>Tiene</option>
+                            <option>No tiene</option>                                           
+                        </select>
+                        <p><strong>gAVINETE DEL dvr</strong>.</p>
+                    </div>
            
                     <div class="col-sm-12 form-group">
                           <label class="control-label">Ultima Observacion</label>

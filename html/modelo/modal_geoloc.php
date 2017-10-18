@@ -2,7 +2,7 @@
       <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> EDITAR SISTEMA DE GEOLOCALIZACIO</h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> EDITAR SISTEMA DE GEOLOCALIZACIÓN</h4>
                 </div>
                 <div class="modal-body col-sm-12">
                      <input  type="hidden" readonly id="geo_bus_idbus" name="geo_bus_idbus">

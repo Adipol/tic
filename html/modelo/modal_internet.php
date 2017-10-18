@@ -2,7 +2,7 @@
       <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> EDITAR SISTEMA DE COBRO</h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> EDITAR SISTEMA DE INTERNET</h4>
                 </div>
                 <div class="modal-body col-sm-12">
                      <input  type="hidden" readonly id="int_bus_idbus" name="int_bus_idbus">

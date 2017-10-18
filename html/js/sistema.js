@@ -474,6 +474,50 @@ function editar_geoloc()
     });
 }
 
+//SEGURIDAD
+//Internet
+
+function detalle_seguridad(id)
+{ 
+   // Add User ID to the hidden field for furture usage
+   $("#update_hidden_seguridad_id").val(id);
+   $.post("modelo/detalle_seguridad.php", 
+	   {
+		   id: id
+	   },
+	   function (data, status) 
+	   {
+		   // PARSE json data
+		   var seg = JSON.parse(data);
+		   // Assing existing valhe modal popup fields  Textos completos
+		   $("#int_cod_user").val(seg.cod_user); 
+		   $("#int_nombre_bus").val(seg.nombre_bus); 
+		   $("#int_bus_idbus").val(seg.bus_idbus); 
+		   $("#int_instalacion_idinstalacion").val(seg.instalacion_idinstalacion);
+		  /* $("#router_existencia").val(inter.router_existencia);
+		   $("#estado").val(inter.estado); 
+		   $("#rout_num_serie").val(inter.rout_num_serie); 
+		   $("#rout_num_imei").val(inter.rout_num_imei); 
+		   $("#rout_estado").val(inter.rout_estado); 
+		   $("#rout_ubicacion").val(inter.rout_ubicacion); 
+		   $("#rout_cargador").val(inter.rout_cargador); 
+		   $("#int_sim").val(inter.sim); 
+		   $("#sim_ubicacion").val(inter.sim_ubicacion); 
+		   $("#sim_numero").val(inter.sim_numero); 
+		   $("#sim_serie").val(inter.sim_serie);
+		   $("#abrazaderas").val(inter.abrazaderas); 
+		   $("#cloud").val(inter.cloud); 
+		   $("#cloud_estado").val(inter.cloud_estado); 
+		   $("#cloud_numero").val(inter.cloud_numero); 
+		   $("#cloud_serie").val(inter.cloud_serie); 
+		   $("#cloud_cargador").val(inter.cloud_cargador); */
+		   $("#obs").val(seg.obs);    
+	   }
+   );
+   // Open modal popup
+   $("#update_seguridad_modal").modal("show");
+}
+
 
 //Internet
 
@@ -564,7 +608,8 @@ if(confirm("Realmente desea cambiar los datos?"))
            cloud_serie:cloud_serie,
            cloud_cargador:cloud_cargador,
            int_observacion:int_observacion
-      },
+	  },
+	  
 
    function (data, status) 
     { 
@@ -572,7 +617,8 @@ if(confirm("Realmente desea cambiar los datos?"))
         $("#update_internet_modal").modal("hide");
         refresh();
 
-    });
+	});
+	
     }
     return false;
 

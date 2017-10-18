@@ -22,7 +22,7 @@ include("modelo/conec.php");
                                   <th>SIST. COBRO</th>
                                   <th>SIST. ACCESO</th>
                                   <th>SIST. GEOLOC.</th>
-                                  <th>SIST. SEGURIAD</th>
+                                  <th>SIST. SEGURIDAD</th>
                                   <th>SIST. AUDIOVISUAL</th>
                                   <th>SIST. INTERNET</th>
                                   <th>SIST. ELECTRICO</th>
@@ -78,8 +78,8 @@ include("modelo/conec.php");
 </div>
 <
 <?php
-include("modelo/modal_acceso.php");
 include("modelo/modal_cobro.php");
+include("modelo/modal_acceso.php");
 include("modelo/modal_geoloc.php");
 include("modelo/modal_seguridad.php");
 include("modelo/modal_audiovisual.php");
